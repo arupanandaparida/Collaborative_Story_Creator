@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ story.title }}</title>
+</head>
+<body>
+    <h1>{{ story.title }}</h1>
+<h3>{{ story.content }}</h3>
+
+<!-- Display the number of contributions -->
+<p><strong>You can add 4 line in this page</strong></p>
+
+<!-- Check if the story is complete -->
+{% if story.contributions_count < 4 %}
+    <!-- Form to add a new line -->
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="new_line" rows="3" placeholder="Add your line..."></textarea>
+        <button type="submit">Add Line</button>
+    </form>
+{% else %}
+    <p>This story is complete. No further contributions can be made.</p>
+{% endif %}
+
+
+</body>
+</html>

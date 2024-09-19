@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .story-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .story {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .story:hover {
+            background-color: #f0f0f0;
+        }
+
+        .story h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .story p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    {% extends 'testapp/base.html' %}
+    {% block body_block %}
+    <h1>
+        Current stories available here
+    </h1>
+    
+    <div class="story-section">
+        
+       
+        
+        <a href="{% url 'story_detail' story_id=2 %}" class="story">
+            <h3>DRIFTWOOD DELIGHT</h3>
+            <p>15-year-old Gracie Thatcher was drinking coffee at Mom 'n 'Em Cafe... </p>
+        </a>
+        <a href="{% url 'story_detail' story_id=3 %}" class="story">
+            <h3> GORAN THE GREGARIOUS  CHEESY WEEZY</h3>
+            <p>People always told Goran he’s superfluously energetic and that his personality was too big...   </p>
+        </a>
+        
+        <a href="{% url 'story_detail' story_id=4 %}" class="story">
+            <h3>CHEESY WEEZY</h3>
+            <p>Reid walked through the doors of the official Coachella Tragedy Memorial. As she snuck into the restaurant...</p>
+        </a>
+        <a href="{% url 'story_detail' story_id=5 %}" class="story">
+            <h3>Bear Witness: Part II</h3>
+            <p>It had been two whole years. Just us. And the bear...</p>
+        </a>
+        </a>
+        <a href="{% url 'story_detail' story_id=6 %}" class="story">
+            <h3>Chicken Pot Why?: Return of the Phone Story Idiot</h3>
+            <p>Your head keeps aching, you’re 28 and an estranged lover who has had his drinks spiked...</p>
+        </a>
+        <a href="{% url 'story_detail' story_id=7 %}" class="story">
+            <h3>Yakkity Yak</h3>
+            <p>"Ladies and gentlemen, we are not here to entertain you. We will not banter or strut or preen or flirt...</p>
+        </a>
+        <a href="{% url 'story_detail' story_id=8 %}" class="story">
+            <h3>Party Rock</h3>
+            <p>The party ship crashed into the planet of no parties. Miraculously, all of the inhabitants of the party ship survived...</p>
+        </a>
+        <a href="{% url 'story_detail' story_id=9 %}" class="story">
+            <h3>Who’s On Lunch Duty</h3>
+            <p>The office break room was more crowded than usual. Molly sidestepped the group of colleagues standing around the water cooler...</p>
+        </a>
+        <a href="{% url 'story_detail' story_id=10 %}" class="story">
+            <h3>Neko team's 1st story!</h3>
+            <p>It all started when MasCat the cat couldn't find his stash of catnip...</p>
+        </a>
+        
+        
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Creative Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .jumbotron {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .jumbotron h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .jumbotron p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .jumbotron a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .jumbotron a:hover {
+            text-decoration: underline;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #3498db;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .app-store-btn img {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        .sign-in {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .sign-in a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sign-in a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'testapp/base.html' %}
+    {% block body_block %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>A Collaborative Creative Web Page</h1>
+            <p>Where stories are built line by line. Contribute to multiplayer stories, seeing only what the previous author wrote.</p>
+            <p>Modeled on the game exquisite corpse, each creation is gloriously unique!</p>
+            <p><a href="#">Still curious? Learn more.</a></p>
+        </div>
+        <div class="buttons">
+            <a href="/accounts/login" class="btn">Start Writing</a>
+            <a href="#" class="app-store-btn">
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred_2x.png" alt="Download on the App Store">
+            </a>
+        </div>
+        
+        <div class="sign-in">
+            <p>Already have an account? <a href="/accounts/login">Sign in!</a></p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
